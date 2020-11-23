@@ -1,0 +1,99 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.1.3, 30 April 2017) written by
+% LianTze Lim (liantze@gmail.com), based on the 
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+% 
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper]{altacv}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+\usepackage[colorlinks=true, urlcolor=red]{hyperref}
+\usepackage{eurosym}
+\usepackage{amstext} % for \text
+\DeclareRobustCommand{\officialeuro}{%
+  \ifmmode\expandafter\text\fi
+  {\fontencoding{U}\fontfamily{eurosym}\selectfont e}}
+
+% If using xelatex or lualatex:
+% \setmainfont{Lato}
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{100000}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\begin{document}
+
+\name{Suraj P. Kesavan}
+\tagline{}
+
+
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+    \email{\href{mailto:spkesavan@ucdavis.ed}{spkesavan@ucdavis.edu}}
+    \phone{\href{tel:+19195939401}{(919)-593-9401}}
+    \homepage{\url{jarusified.github.io}}
+    \github{\url{https://github.com/jarusified}}
+    \linkedin{\url{https://www.linkedin.com/in/surajkesavan/}}
+  % I'm just making this up though.
+  \orcid{orcid.org/0000-0001-8524-6648} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+}
+
+%% Make the header extend all the way to the right, if you want.
+
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\begin{twocolumn}[
+    \makecvheader
+]
+
+\input{Education}
+% \input{Experience}
+% \input{Projects}
+
+\cvsection{Skills}
+
+\cvsubsection{Programming}
+    \cvtag{Python}
+    \cvtag{Javascript}
+    \cvtag{C}
+    \cvtag{C++}
+    \cvtag{MPI Programming}
+    \cvtag{CUDA}
+    
+\divider
+
+\cvsubsection{Tools and Libraries}
+    \cvtag{React}
+    \cvtag{React-Native}
+    \cvtag{numpy}
+    \cvtag{pandas}
+    \cvtag{Git}
+    \cvtag{Flask}
+
+\end{twocolumn}
+
+\end{document}
