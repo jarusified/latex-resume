@@ -1,10 +1,14 @@
 RESUME = resume.tex
+CV = cv.tex
 TEX = $(wildcard *.tex)
 
 .PHONY: all clean 
 
-paper:
+resume:
 	pdflatex $(RESUME)
+
+cv:
+	xelatex $(CV)
 
 clean:
 	rm -f *.ilg *.aux *.log *.out *.brf *.lbl *.dvi *.idx *.toc *.lof *.lot
@@ -14,6 +18,7 @@ cleanall:
 	rm -f *.ilg *.aux *.log *.out *.brf *.lbl *.dvi *.idx *.toc *.lof *.lot
 	rm -f *.blg *.bbl *~
 	rm -f {RESUME}.pdf
+	rm -f {CV}.pdf
 
 update:
 	git pull
